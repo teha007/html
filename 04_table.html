@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>04Table</title>
+    </head>
+
+    <body>
+        
+        <table border="1">
+            <!-- 테이블 헤더 -->
+            <tr>
+                <th>no</th>
+                <th>name</th>
+                <th>message</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>sam</td>
+                <td>Hello.</td>
+            </tr>
+
+            <!-- 각 행(row)의 데이터(셀)개수가 다를 수 있음. -->
+            <tr>
+                <td>2</td>
+                <td>robin</td>
+                <td>nice to meet you.</td>
+                <td>20191203</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <!-- 셀병합 -->
+        <table border="1">
+
+            <!-- 한줄만 있을 때는 비교대상이 없기에 span의 영향이 없음. -->
+            <tr>
+                <td rowspan="2">111</td>
+                <td colspan="3">222</td>
+                <td>333</td>
+            </tr>
+
+            <tr>
+                <td>444</td>
+                <td>555</td>
+                <td>6666666666</td>
+            </tr>
+
+            <!-- 테이블 전체 제목(caption) -->
+            <caption>테이블 제목</caption>
+            <!-- caption은 작성위치와 상관없이 무조건 테이블의 상단에 표시됨 -->
+            <!-- 만약 조정하고 싶다면... css를 사용해야함. -->
+        </table>
+
+        <hr>
+
+        <!-- 테이블 <td>요소안에 다른 요소(element) 넣기 -->
+        <table border="1" width="100%">
+            <tr>
+                <!-- <td>안에 <a>요소 넣기 -->
+                <td width="30%"><a href="http://www.naver.com">NAVER</a></td>
+                
+                <!-- <td>안에 <ul>요소 넣기 -->
+                <td>
+                    <ul>
+                        <li>aaa</li>
+                        <li>bbb</li>
+                        <li>ccc</li>
+                    </ul>
+                </td>    
+            </tr>
+
+            <tr>
+                <!-- <td>에 <p>요소 넣기 -->
+                <td>
+                    <p>테이블안에 어떤 요소든 넣을 수 있음. 한글은 자동 줄바꿈이 됨.</p>
+                    <!-- 영어는 한글과 다르게 자동 줄바꿈이 안됨. 대신 wrap_content-->
+                    <p>asdfasdfasdfasdfsadfasdfasdfasdfasdfasdfasdfasdfasdfasdfa</p>
+                </td>
+                
+                <!-- <td>에 <img>요소 넣기 -->
+                <td>
+                    <img src="./original.gif" alt="moana" width="70%" height="150">
+                    <!-- 가운데 정렬같은 꾸밈 작업은 css시간에.. -->
+                </td>    
+            </tr>
+
+        </table>    
+
+    </body>
+</html>
